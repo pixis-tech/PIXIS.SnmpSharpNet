@@ -1,0 +1,22 @@
+name: Build
+
+on:
+  pull_request:
+    branches: [master]
+  push:
+    branches: [master]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: '10.0.x'
+      - run: dotnet restore SnmpSharpNet.sln
+      - run: dotnet build SnmpSharpNet.sln --configuration Release --no-restore
+      - run: dotnet pack SnmpSharpNet.csproj --configuration Release --no-build --no-restore --output ./artifacts
