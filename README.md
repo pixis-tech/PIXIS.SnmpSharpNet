@@ -1,8 +1,7 @@
-![Nuget](https://img.shields.io/nuget/v/SnmpSharpNet)
-
-# SnmpSharpNet
+# PIXIS.SnmpSharpNet
 Simple Network Management Protocol (SNMP) .Net library written in C# (csharp). Implements protocol version 1, 2 and 3. 
-This library migrate from https://sourceforge.net/projects/snmpsharpnet/
+
+This repository is a fork of [SnmpSharpNet](https://github.com/rqx110/SnmpSharpNet/) targeting .NET Standard 2.0.
 
 # Document
 [see wiki](https://github.com/rqx110/SnmpSharpNet/wiki)
